@@ -1,0 +1,19 @@
+
+<div class="parent-container">
+    <mat-card>
+        <mat-card-content>
+            <div *ngIf="nomineeList && nomineeList.length > 0">
+                <div class="margin-15" *ngFor="let nominee of nomineeList">
+                    <button mat-stroked-button (click)="selectedCandidate(nominee)">Candidate : {{nominee.candidate}} - Party : {{nominee.party}}</button>
+                </div>
+            </div>
+            
+            <div class="admin-button">
+                <button mat-icon-button color="primary" (click)="goToHome()">
+                    <mat-icon>home</mat-icon>
+                  </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>

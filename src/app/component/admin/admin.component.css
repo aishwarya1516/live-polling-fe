@@ -1,0 +1,29 @@
+.parent-container {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mat-card {
+height:300px;
+width:350px;
+}
+.mat-card-content {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.margin-15 {
+    margin:15px;
+}
+.mat-form-field {
+    width:350px;
+}
+.admin-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}

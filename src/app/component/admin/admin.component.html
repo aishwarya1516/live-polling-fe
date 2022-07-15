@@ -1,0 +1,33 @@
+
+<div class="parent-container">
+    <mat-card>
+        <mat-card-content>
+            <div class="admin-header">Admin Login</div>
+          <form [formGroup]="adminForm">
+            <!--Name-->
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>User Name</mat-label>
+                <input type="text" matInput formControlName="name" 
+                       placeholder="username">
+                <mat-error *ngIf="errorControl.name.errors.required">
+                  Name is<strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <!--Password-->
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="text" matInput formControlName="password" 
+                       placeholder="Password">
+                <mat-error *ngIf="errorControl.password.errors.required">
+                  Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+          </form>
+          <button mat-stroked-button (click)="login()">Login</button>
+          <button mat-icon-button color="primary" (click)="goToHome()">
+            <mat-icon>home</mat-icon>
+          </button>
+        </mat-card-content>
+    </mat-card>
+
+</div>

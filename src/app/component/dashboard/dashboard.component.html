@@ -1,0 +1,33 @@
+<div class="parent-container">
+    <div class="home">
+        <button mat-icon-button color="primary" (click)="goToHome()">
+            <mat-icon>home</mat-icon>
+          </button>
+    </div>
+    <mat-card>
+        <div class="upper-flex">
+            <div class="total-count">
+                <div class="total-header">
+                    Total Votes
+                </div>
+                <div class="count" *ngIf="voteCount">
+                    {{voteCount}}
+                </div>
+            </div>
+            <div class="nominee" *ngIf="nomineeData.length > 0"> 
+                <div class="nominee-header">
+                    Nominee Vote List
+                </div>
+                <div class="nomineeData" *ngFor="let nominee of nomineeData">
+                    {{nominee.candidate[0].candidate}} - {{nominee.totalVote}}
+                </div>
+            </div>
+        </div>
+        <div class="chart-flex">
+            <div class="chart-box" *ngIf="nomineeData.length > 0">
+                <app-chart [chartData]="nomineeData"></app-chart>
+            </div>
+        </div>
+        
+    </mat-card>
+</div>
