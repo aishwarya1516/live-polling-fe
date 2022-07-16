@@ -36,13 +36,11 @@ export class PollingComponent implements OnInit {
   }
 
   selectedCandidate(nominee) {
-    console.log('nominee data', nominee);
     const data = {
       candidateId: nominee._id
     }
     if(sessionStorage.getItem('candidateId') === null) {
     this.socketService.sendVote(data);
-    console.log('socket');
       sessionStorage.setItem('candidateId', nominee._id);
     } else {
       this.openSnackBar();

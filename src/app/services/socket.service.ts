@@ -22,7 +22,6 @@ export class SocketService {
   getVoteDetails() {
     return Observable.create((observer) => {
       this.socket.on('voteData', (values) => {
-        console.log('inside socket emit');
         observer.next(values);
       })
     })

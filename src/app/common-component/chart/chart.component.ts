@@ -34,7 +34,6 @@ export class ChartComponent implements OnInit {
           value: item.totalVote,
           color: this.chartColor[index]
         })
-        console.log('this.chartValues', this.chartValues);
       })
     }
   }
