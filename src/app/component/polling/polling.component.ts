@@ -40,13 +40,10 @@ export class PollingComponent implements OnInit {
     const data = {
       candidateId: nominee._id
     }
-    if(sessionStorage.getItem('candidate') === null && sessionStorage.getItem('party') === null) {
-    //   this.pollingService.createPolling(data).subscribe(response => {
-    
-    //   console.log('response');
-    // })
+    if(sessionStorage.getItem('candidateId') === null) {
     this.socketService.sendVote(data);
-    //   sessionStorage.setItem('candidateId', nominee._id);
+    console.log('socket');
+      sessionStorage.setItem('candidateId', nominee._id);
     } else {
       this.openSnackBar();
     }

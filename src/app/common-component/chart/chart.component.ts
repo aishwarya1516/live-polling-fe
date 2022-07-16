@@ -18,6 +18,7 @@ export class ChartComponent implements OnInit {
     legendTitle: 'Total'
   }
 
+  chartColor = ["#61b15a","#adce74" ,"#fff76a", "#ffce89", "#d8f8b7"]
   constructor() { }
 
   ngOnInit(): void {
@@ -28,11 +29,10 @@ export class ChartComponent implements OnInit {
   generateChartData() {
     if(this.chartData.length > 0) {
       this.chartData.map((item, index) => {
-        let color = '#adce'+ (7 -index) + index;
         this.chartValues.push({
           name: item.candidate[0].candidate,
           value: item.totalVote,
-          color: color
+          color: this.chartColor[index]
         })
         console.log('this.chartValues', this.chartValues);
       })

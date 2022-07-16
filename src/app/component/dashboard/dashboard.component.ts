@@ -26,12 +26,14 @@ export class DashboardComponent implements OnInit {
   
 
   getPollingData() {
+    console.log('inside polling data');
     // this.socketService.getVoteDetails().subscribe(response => {
     //        this.voteCount = response.total;
     //   this.nomineeData = response.data;
     // })
     this.pollingService.getPolling().subscribe(response => {
-      
+      this.voteCount = response.total;
+      this.nomineeData = response.data;
     })
   }
 
