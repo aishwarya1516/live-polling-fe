@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { v4 as uuidv4 } from 'uuid';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -35,6 +36,7 @@ public adminForm: FormGroup;
   login() {
     const data = this.adminForm.getRawValue();
     if(data.name === 'admin' && data.password === 'password'){
+      sessionStorage.setItem('uuid', uuidv4());
       this.router.navigate(['dashboard']);
     }
   }

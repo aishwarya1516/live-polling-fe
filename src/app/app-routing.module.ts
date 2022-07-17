@@ -4,6 +4,7 @@ import { HomeComponent } from './component/home/home.component';
 import { PollingComponent } from './component/polling/polling.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { AuthGuardGuard } from './auth/auth-guard.guard';
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +20,8 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuardGuard]
   }
 ];
 

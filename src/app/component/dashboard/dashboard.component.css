@@ -1,13 +1,16 @@
 .parent-container {
     height: 100%;
 }
+
 .mat-card {
-    height:100%;
+    height: 100%;
 }
+
 .upper-flex {
     display: flex;
     justify-content: space-around;
 }
+
 .total-count {
     width: 30%;
     border: 1px solid lightgray;
@@ -17,40 +20,48 @@
     justify-content: center;
     align-items: center;
 }
+
 .total-header {
-    padding-top:20px;
-    font-size:18px;
-    font-weight:bold;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
 }
+
 .count {
-    padding:20px 0px;
+    padding: 20px 0px;
     font-size: 20px;
 }
+
 .nominee {
     width: 30%;
     border: 1px solid lightgray;
     border-radius: 10px;
 }
+
 .nomineeData {
     padding: 10px 20px;
     text-align: center;
 }
+
 .nominee-header {
-    padding:20px;
-    font-size:18px;
-    font-weight:bold;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
 }
+
 .chart-box {
-    margin-top:20px;
-    border:1px solid lightgray;
+    margin-top: 20px;
+    border: 1px solid lightgray;
     border-radius: 10px;
-    width:350px;
+    width: 350px;
 }
+
 .chart-flex {
     display: flex;
     justify-content: center;
 }
+
 .home {
     display: flex;
     justify-content: flex-end;

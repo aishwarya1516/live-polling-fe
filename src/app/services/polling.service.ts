@@ -11,15 +11,19 @@ export class PollingService {
 
 
 
-  getNominees(): Observable<any> {
-    return this.httpClient.get(`${environment.apiEndPointUrl}/nominee`);
+  getNominees(): Promise<any> {
+    return this.httpClient.get(`${environment.apiEndPointUrl}/nominee`).toPromise();
   }
 
-  createPolling(data): Observable<any> {
-    return this.httpClient.post(`${environment.apiEndPointUrl}/polling`, data);
+  createPolling(data): Promise<any> {
+    return this.httpClient.post(`${environment.apiEndPointUrl}/polling`, data).toPromise();
   }
 
-  getPolling(): Observable<any> {
-    return this.httpClient.get(`${environment.apiEndPointUrl}/polling`);
+  getPolling(id): Promise<any> {
+    let header = new HttpHeaders().set(
+      "Authorization",
+       sessionStorage.getItem('uuid')
+    );
+    return this.httpClient.get(`${environment.apiEndPointUrl}/polling`,{ headers: header}).toPromise();
   }
 }

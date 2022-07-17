@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   
 
   getPollingData() {
-    this.pollingService.getPolling().subscribe(response => {
+    this.pollingService.getPolling(sessionStorage.getItem('uuid')).then(response => {
       this.voteCount = response.total;
       this.nomineeData = response.data;
     })

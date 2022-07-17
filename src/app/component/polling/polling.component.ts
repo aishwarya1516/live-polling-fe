@@ -26,7 +26,7 @@ export class PollingComponent implements OnInit {
   }
 
   getNominee() {
-    this.pollingService.getNominees().subscribe(response => {
+    this.pollingService.getNominees().then(response => {
       if(response) {
         this.nomineeList = response;
       }
