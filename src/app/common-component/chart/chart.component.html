@@ -1,5 +1,5 @@
 <div *ngIf="chartValues.length > 0">
 
-    <ngx-pie-chart [chartData]='chartValues' [view]='pieView' [chartOptions]='chartOptions'></ngx-pie-chart>
+    <ngx-pie-chart [chartData]='chartValues' [view]='pieView' [chartOptions]='chartOptions' *ngIf="showChart"></ngx-pie-chart>
 </div>
 
